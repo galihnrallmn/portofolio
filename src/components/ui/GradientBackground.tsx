@@ -1,0 +1,53 @@
+import { motion } from "framer-motion";
+
+export default function GradientBackground() {
+  return (
+    <>
+      <motion.div
+        animate={{
+          x: [0, 80, 0],
+          y: [0, -40, 0],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="
+          fixed
+          -left-40
+          top-0
+          -z-10
+          h-[500px]
+          w-[500px]
+          rounded-full
+          bg-blue-400/20
+          blur-[120px]
+        "
+      />
+
+      <motion.div
+        animate={{
+          x: [0, -60, 0],
+          y: [0, 60, 0],
+        }}
+        transition={{
+          duration: 18,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="
+          fixed
+          right-0
+          bottom-0
+          -z-10
+          h-[450px]
+          w-[450px]
+          rounded-full
+          bg-cyan-400/20
+          blur-[120px]
+        "
+      />
+    </>
+  );
+}
