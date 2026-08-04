@@ -1,0 +1,22 @@
+{
+  "name": "Muhamad Galih Noor Allamin",
+  "short_name": "Galih",
+  "description": "Personal Portfolio Website",
+  "start_url": "/portofolio/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/portofolio/icons/icon-192.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/portofolio/icons/icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
