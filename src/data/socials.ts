@@ -3,16 +3,16 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 export const socials = [
   {
     icon: FaGithub,
-    url: "https://github.com/USERNAME",
+    url: "https://github.com/galihnrallmn",
   },
 
   {
     icon: FaLinkedin,
-    url: "https://linkedin.com/in/USERNAME",
+    url: "https://linkedin.com/in/muhamad-galih-noor-allamin",
   },
 
   {
     icon: FaEnvelope,
-    url: "mailto:email@email.com",
+    url: "mailto:galihnrallmn@gmail.com",
   },
 ];

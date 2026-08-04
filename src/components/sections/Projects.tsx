@@ -1,29 +1,40 @@
+import { useState } from "react";
+
 import Container from "@/components/shared/Container";
+import ProjectCard from "@/components/shared/ProjectCard";
+import ProjectModal from "@/components/shared/ProjectModal";
 import Section from "@/components/shared/Section";
 import SectionTitle from "@/components/shared/SectionTitle";
-import ProjectCard from "@/components/shared/ProjectCard";
-
-import { projects } from "@/data/projects";
+import Reveal from "@/components/ui/Reveal";
+import Stagger from "@/components/ui/Stagger";
+import StaggerItem from "@/components/ui/StaggerItem";
+import { projects, type Project } from "@/data/projects";
 
 export default function Projects() {
-  return (
-    <Section id="projects">
-      <Container>
-        <SectionTitle title="Projects" subtitle="Portfolio" />
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-        <div
-          className="
-            grid
-            gap-8
-            md:grid-cols-2
-            xl:grid-cols-3
-          "
-        >
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-      </Container>
-    </Section>
+  return (
+    <>
+      <Section id="projects">
+        <Reveal>
+          <Container>
+            <SectionTitle title="Featured Projects" subtitle="My Portfolio" />
+
+            <Stagger className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+              {projects.map((project) => (
+                <StaggerItem key={project.id}>
+                  <ProjectCard project={project} onView={setSelectedProject} />
+                </StaggerItem>
+              ))}
+            </Stagger>
+          </Container>
+        </Reveal>
+      </Section>
+
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
+    </>
   );
 }

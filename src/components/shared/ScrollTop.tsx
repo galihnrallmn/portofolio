@@ -5,13 +5,13 @@ export default function ScrollTop() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
+    const handleScroll = () => {
       setVisible(window.scrollY > 400);
     };
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   if (!visible) return null;
@@ -24,23 +24,7 @@ export default function ScrollTop() {
           behavior: "smooth",
         })
       }
-      className="
-        fixed
-        bottom-6
-        right-6
-        z-50
-        flex
-        h-14
-        w-14
-        items-center
-        justify-center
-        rounded-full
-        bg-blue-600
-        text-white
-        shadow-xl
-        transition
-        hover:scale-110
-      "
+      className="fixed right-8 bottom-8 z-50 rounded-full bg-blue-600 p-4 text-white shadow-xl transition hover:bg-blue-700"
     >
       <FaArrowUp />
     </button>

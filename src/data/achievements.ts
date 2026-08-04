@@ -1,5 +1,5 @@
-import { FaAward } from "react-icons/fa";
 import type { IconType } from "react-icons";
+import { FaAward } from "react-icons/fa";
 
 export interface Achievement {
   title: string;

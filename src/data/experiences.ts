@@ -1,5 +1,5 @@
-import { FaBriefcase, FaGraduationCap, FaLaptopCode } from "react-icons/fa";
 import type { IconType } from "react-icons";
+import { FaBriefcase, FaGraduationCap, FaLaptopCode } from "react-icons/fa";
 
 export interface Experience {
   year: string;

@@ -11,15 +11,7 @@ export default function StatCard({ value, label }: Props) {
       whileHover={{
         y: -6,
       }}
-      className="
-        rounded-3xl
-        border
-        border-slate-200
-        bg-white/70
-        p-6
-        shadow-lg
-        backdrop-blur
-      "
+      className="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-lg backdrop-blur"
     >
       <h3 className="text-4xl font-black text-blue-600">{value}</h3>
 

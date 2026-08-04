@@ -1,4 +1,7 @@
+import { motion } from "framer-motion";
 import type { IconType } from "react-icons";
+
+import Card from "@/components/shared/Card";
 
 interface Props {
   icon: IconType;
@@ -9,32 +12,30 @@ interface Props {
 
 export default function ContactCard({ icon: Icon, title, value, href }: Props) {
   return (
-    <a
+    <motion.a
+      whileHover={{
+        y: -5,
+      }}
+      transition={{
+        duration: 0.25,
+      }}
       href={href}
       target={href.startsWith("http") ? "_blank" : "_self"}
       rel="noreferrer"
-      className="
-        flex
-        items-center
-        gap-4
-        rounded-2xl
-        border
-        border-slate-200
-        bg-white/70
-        p-5
-        transition
-        hover:border-blue-500
-        hover:shadow-lg
-      "
     >
-      <div className="rounded-xl bg-blue-600 p-4 text-white">
-        <Icon size={20} />
-      </div>
+      <Card className="flex items-center gap-5 border-slate-200 p-5 dark:border-slate-700 dark:bg-slate-900">
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg">
+          <Icon size={22} />
+        </div>
 
-      <div>
-        <p className="text-sm text-slate-500">{title}</p>
-        <p className="font-semibold">{value}</p>
-      </div>
-    </a>
+        <div>
+          <p className="text-sm text-slate-500 dark:text-slate-400">{title}</p>
+
+          <h3 className="font-semibold text-slate-900 dark:text-white">
+            {value}
+          </h3>
+        </div>
+      </Card>
+    </motion.a>
   );
 }

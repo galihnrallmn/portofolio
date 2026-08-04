@@ -1,0 +1,6 @@
+{
+  "frontend": ["React", "TypeScript", "Tailwind CSS"],
+  "backend": ["Laravel", "CodeIgniter", "PHP"],
+  "database": ["MySQL", "Firebase"],
+  "tools": ["Git", "Figma", "VS Code"]
+}

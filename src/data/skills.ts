@@ -1,98 +1,119 @@
+import type { IconType } from "react-icons";
 import {
-  FaReact,
-  FaLaravel,
-  FaGitAlt,
-  FaGithub,
-  FaHtml5,
-  FaCss3Alt,
-  FaPhp,
-  FaNodeJs,
-} from "react-icons/fa";
-
-import {
+  SiReact,
   SiTypescript,
   SiJavascript,
-  SiMysql,
-  SiFirebase,
   SiTailwindcss,
   SiVite,
+  SiLaravel,
   SiCodeigniter,
+  SiPhp,
+  SiMysql,
+  SiFirebase,
+  SiGit,
+  SiGithub,
+  SiFigma,
 } from "react-icons/si";
 
-export const skills = [
+
+export interface Skill {
+  name: string;
+  icon: IconType;
+  color: string;
+}
+
+export interface SkillCategory {
+  title: string;
+  skills: Skill[];
+}
+
+export const skillCategories: SkillCategory[] = [
   {
-    name: "HTML5",
-    icon: FaHtml5,
-    color: "text-orange-500",
+    title: "Frontend",
+    skills: [
+      {
+        name: "React",
+        icon: SiReact,
+        color: "#61DAFB",
+      },
+      {
+        name: "TypeScript",
+        icon: SiTypescript,
+        color: "#3178C6",
+      },
+      {
+        name: "JavaScript",
+        icon: SiJavascript,
+        color: "#F7DF1E",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+        color: "#06B6D4",
+      },
+      {
+        name: "Vite",
+        icon: SiVite,
+        color: "#646CFF",
+      },
+    ],
   },
+
   {
-    name: "CSS3",
-    icon: FaCss3Alt,
-    color: "text-blue-500",
+    title: "Backend",
+    skills: [
+      {
+        name: "Laravel",
+        icon: SiLaravel,
+        color: "#FF2D20",
+      },
+      {
+        name: "CodeIgniter",
+        icon: SiCodeigniter,
+        color: "#EF4223",
+      },
+      {
+        name: "PHP",
+        icon: SiPhp,
+        color: "#777BB4",
+      },
+    ],
   },
+
   {
-    name: "JavaScript",
-    icon: SiJavascript,
-    color: "text-yellow-400",
+    title: "Database",
+    skills: [
+      {
+        name: "MySQL",
+        icon: SiMysql,
+        color: "#4479A1",
+      },
+      {
+        name: "Firebase",
+        icon: SiFirebase,
+        color: "#FFCA28",
+      },
+    ],
   },
+
   {
-    name: "TypeScript",
-    icon: SiTypescript,
-    color: "text-blue-600",
-  },
-  {
-    name: "React",
-    icon: FaReact,
-    color: "text-cyan-500",
-  },
-  {
-    name: "Tailwind",
-    icon: SiTailwindcss,
-    color: "text-sky-500",
-  },
-  {
-    name: "Laravel",
-    icon: FaLaravel,
-    color: "text-red-500",
-  },
-  {
-    name: "CodeIgniter",
-    icon: SiCodeigniter,
-    color: "text-red-600",
-  },
-  {
-    name: "PHP",
-    icon: FaPhp,
-    color: "text-indigo-500",
-  },
-  {
-    name: "MySQL",
-    icon: SiMysql,
-    color: "text-blue-700",
-  },
-  {
-    name: "Firebase",
-    icon: SiFirebase,
-    color: "text-yellow-500",
-  },
-  {
-    name: "NodeJS",
-    icon: FaNodeJs,
-    color: "text-green-600",
-  },
-  {
-    name: "Git",
-    icon: FaGitAlt,
-    color: "text-orange-600",
-  },
-  {
-    name: "GitHub",
-    icon: FaGithub,
-    color: "text-black",
-  },
-  {
-    name: "Vite",
-    icon: SiVite,
-    color: "text-violet-500",
+    title: "Tools",
+    skills: [
+      {
+        name: "Git",
+        icon: SiGit,
+        color: "#F05032",
+      },
+      {
+        name: "GitHub",
+        icon: SiGithub,
+        color: "#181717",
+      },
+      {
+        name: "Figma",
+        icon: SiFigma,
+        color: "#F24E1E",
+      },
+    ],
   },
 ];

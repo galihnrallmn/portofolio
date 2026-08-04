@@ -20,6 +20,14 @@ export const navigation = [
     to: "projects",
   },
   {
+    label: "Education",
+    to: "education",
+  },
+  {
+    label: "Achievements",
+    to: "achievements",
+  },
+  {
     label: "Contact",
     to: "contact",
   },

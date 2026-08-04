@@ -1,10 +1,12 @@
+import type { IconType } from "react-icons";
 import {
   FaEnvelope,
   FaGithub,
   FaLinkedin,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import type { IconType } from "react-icons";
+
+import { siteConfig } from "@/config/site";
 
 export interface ContactItem {
   icon: IconType;
@@ -17,25 +19,25 @@ export const contacts: ContactItem[] = [
   {
     icon: FaEnvelope,
     title: "Email",
-    value: "email@example.com",
-    href: "mailto:email@example.com",
+    value: siteConfig.email,
+    href: `mailto:${siteConfig.email}`,
   },
   {
     icon: FaGithub,
     title: "GitHub",
-    value: "github.com/username",
-    href: "https://github.com/username",
+    value: siteConfig.github.replace("https://", ""),
+    href: siteConfig.github,
   },
   {
     icon: FaLinkedin,
     title: "LinkedIn",
-    value: "linkedin.com/in/username",
-    href: "https://linkedin.com/in/username",
+    value: siteConfig.linkedin.replace("https://", ""),
+    href: siteConfig.linkedin,
   },
   {
     icon: FaMapMarkerAlt,
     title: "Location",
-    value: "South Kalimantan, Indonesia",
+    value: siteConfig.location,
     href: "#",
   },
 ];

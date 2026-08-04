@@ -6,7 +6,7 @@ interface Props {
 export default function SectionTitle({ title, subtitle }: Props) {
   return (
     <div className="mb-16 text-center">
-      <p className="font-semibold uppercase tracking-[5px] text-blue-600">
+      <p className="font-semibold tracking-[5px] text-blue-600 uppercase">
         {subtitle}
       </p>
 

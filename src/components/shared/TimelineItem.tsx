@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import type { IconType } from "react-icons";
 
+import Badge from "@/components/shared/Badge";
+import Card from "@/components/shared/Card";
+
 interface Props {
   year: string;
   title: string;
@@ -18,29 +21,49 @@ export default function TimelineItem({
 }: Props) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -30 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{
+        opacity: 0,
+        x: -40,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="relative pl-14"
+      transition={{
+        duration: 0.5,
+      }}
+      className="relative pl-16"
     >
-      {/* Garis */}
-      <div className="absolute left-5 top-0 h-full w-0.5 bg-slate-200" />
+      {/* Timeline Line */}
 
-      {/* Titik */}
-      <div className="absolute left-0 top-2 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg">
-        <Icon size={18} />
-      </div>
+      <div className="absolute top-0 left-6 h-full w-px bg-gradient-to-b from-blue-500 via-blue-300 to-transparent" />
 
-      <span className="inline-block rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-700">
-        {year}
-      </span>
+      {/* Timeline Icon */}
 
-      <h3 className="mt-3 text-2xl font-bold">{title}</h3>
+      <motion.div
+        whileHover={{
+          scale: 1.1,
+          rotate: 10,
+        }}
+        className="absolute top-2 left-0 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg ring-4 ring-blue-100 dark:ring-slate-800"
+      >
+        <Icon size={20} />
+      </motion.div>
 
-      <p className="mt-1 font-medium text-blue-600">{company}</p>
+      <Card className="group p-7 transition-all duration-300 hover:border-blue-500 hover:shadow-2xl">
+        <Badge variant="primary">{year}</Badge>
 
-      <p className="mt-4 leading-8 text-slate-600">{description}</p>
+        <h3 className="mt-4 text-2xl font-bold transition-colors group-hover:text-blue-600 dark:text-white">
+          {title}
+        </h3>
+
+        <p className="mt-2 font-semibold text-blue-600">{company}</p>
+
+        <p className="mt-5 leading-8 text-slate-600 dark:text-slate-300">
+          {description}
+        </p>
+      </Card>
     </motion.div>
   );
 }

@@ -1,27 +1,45 @@
-export const profile = {
-  name: "Muhamad Galih Noor Allamin",
+export interface ProfileStat {
+  value: string;
+  label: string;
+}
 
+export interface Profile {
+  title: string;
+  description: string;
+  experience: string;
+  location: string;
+  education: string;
+  stats: ProfileStat[];
+}
+
+export const profile: Profile = {
   title: "Web Developer",
 
   description:
-    "Saya adalah seorang Web Developer yang berfokus pada pengembangan aplikasi web modern menggunakan React, Laravel, TypeScript, dan teknologi web terkini. Saya senang membangun antarmuka yang cepat, responsif, dan mudah digunakan.",
+    "Saya adalah Web Developer yang berfokus pada pengembangan aplikasi web modern menggunakan React, TypeScript, Laravel, dan berbagai teknologi terkini. Saya senang membangun antarmuka yang cepat, responsif, dan mudah digunakan.",
+
+  experience: "Freelance Web Developer sejak 2024",
+
+  location: "Pelaihari, Kalimantan Selatan",
+
+  education: "D3 Teknologi Informasi",
 
   stats: [
     {
-      value: "7+",
+      value: "10+",
       label: "Projects",
     },
     {
-      value: "10+",
-      label: "Technologies",
-    },
-    {
-      value: "3+",
+      value: "2+",
       label: "Years Learning",
     },
     {
-      value: "1",
-      label: "Certification",
+      value: "5+",
+      label: "Technologies",
+    },
+    {
+      value: "100%",
+      label: "Commitment",
     },
   ],
 };

@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "title": "LarisPOS",
+  "description": "Modern Point of Sale application.",
+  "image": "/images/project.jpg",
+  "status": "Completed",
+  "technologies": ["React", "TypeScript", "Laravel", "MySQL"],
+  "features": ["Dashboard", "Cashier", "QRIS Payment"],
+  "github": "#",
+  "demo": "#"
+}
