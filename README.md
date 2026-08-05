@@ -1,32 +1,159 @@
-# React + TypeScript + Vite
+# 👋 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Website portofolio pribadi modern, responsif, dan siap untuk produksi, dibangun menggunakan React, TypeScript, dan Vite. Dirancang untuk menampilkan proyek, keterampilan, pengalaman, serta pencapaian dengan animasi yang mulus, dukungan mode gelap, dan antarmuka pengguna yang bersih serta mudah digunakan.
 
-Currently, two official plugins are available:
+🌐 **Live Demo**
+https://galihnrallmn.github.io/portofolio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📸 Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<p align="center">
+  <img src="./public/preview.png" alt="Portfolio Preview" width="100%">
+</p>
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## ✨ Features
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- 📱 Fully Responsive Design
+- 🌙 Dark / Light Mode
+- 🎨 Modern UI with Tailwind CSS
+- ⚡ Built with Vite
+- ⚛️ React + TypeScript
+- 📧 Contact Form with EmailJS
+- 🔍 SEO Optimized
+- ♿ Accessibility Improvements
+- 🧪 Unit Testing with Vitest
+- 🚀 GitHub Actions CI
+- 🎭 Smooth Animations using Framer Motion
+- 🧩 Reusable Components
+- 📂 Clean Folder Structure
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Framework | React 19 |
+| Language | TypeScript |
+| Build Tool | Vite |
+| Styling | Tailwind CSS |
+| Animation | Framer Motion |
+| Icons | Lucide React |
+| Email | EmailJS |
+| Testing | Vitest + React Testing Library |
+| Code Quality | ESLint + Prettier |
+| Deployment | GitHub Pages |
+
+---
+
+## 📁 Project Structure
+
+```text
+src
+├── assets
+├── components
+│   ├── accessibility
+│   ├── layout
+│   ├── sections
+│   ├── shared
+│   ├── seo
+│   └── ui
+├── config
+├── context
+├── data
+├── hooks
+├── pages
+├── services
+├── styles
+├── test
+├── types
+└── utils
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## 🚀 Getting Started
+
+Clone repository
+
+```bash
+git clone https://github.com/galihnrallmn/portofolio.git
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📦 Available Scripts
+
+Start development server
+
+```bash
+npm run dev
+```
+
+Build production
+
+```bash
+npm run build
+```
+
+Preview production build
+
+```bash
+npm run preview
+```
+
+Run tests
+
+```bash
+npm test -- --run
+```
+
+Coverage
+
+```bash
+npm run test:coverage
+```
+
+Lint
+
+```bash
+npm run lint
+```
+
+Format
+
+```bash
+npm run format
+```
+
+---
+
+## 📧 Contact
+
+Feel free to contact me.
+
+- Email : **galihnrallmn@gmail.com**
+- LinkedIn : https://linkedin.com/in/muhamad-galih-noor-allamin
+- GitHub : https://github.com/galihnrallmn
+
+---
+
+## 📄 License
+
+This project is released under the MIT License.
