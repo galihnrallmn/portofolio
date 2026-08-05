@@ -38,7 +38,7 @@ export default function About() {
                 <SmartImage
                   src={siteConfig.avatar}
                   alt={siteConfig.name}
-                  className="relative h-80 w-80 rounded-full border-8 border-white object-cover shadow-2xl"
+                  className="relative h-80 w-80 rounded-full border-8 border-white object-cover shadow-2xl dark:border-slate-900"
                 />
               </div>
             </motion.div>
@@ -109,12 +109,12 @@ interface InfoCardProps {
 function InfoCard({ icon, title, value }: InfoCardProps) {
   return (
     <Card className="flex items-center gap-4 p-5">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-slate-800">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-slate-800 dark:text-blue-400">
         {icon}
       </div>
 
       <div>
-        <p className="text-sm text-slate-500">{title}</p>
+        <p className="text-sm text-slate-500 dark:text-slate-400">{title}</p>
 
         <h4 className="font-semibold dark:text-white">{value}</h4>
       </div>

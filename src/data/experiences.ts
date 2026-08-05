@@ -15,11 +15,11 @@ export const experiences: Experience[] = [
     title: "Freelance Web Developer",
     company: "Self Employed",
     description:
-      "Mengembangkan aplikasi web modern menggunakan React, Laravel, TypeScript, dan MySQL untuk berbagai kebutuhan klien.",
+      "Mengembangkan aplikasi web modern menggunakan React, Laravel, Codeigniter, TypeScript, dan MySQL untuk berbagai kebutuhan klien.",
     icon: FaLaptopCode,
   },
   {
-    year: "2025",
+    year: "2024 - 2025",
     title: "Web Developer Intern",
     company: "PT. Inovasi Informatik Sinergi",
     description:

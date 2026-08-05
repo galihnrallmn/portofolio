@@ -18,12 +18,17 @@ const cardVariants = cva(
           shadow-lg
           hover:-translate-y-1
           hover:shadow-2xl
+          dark:border-slate-800
+          dark:bg-slate-900
+          dark:shadow-black/30
         `,
 
         glass: `
           border-white/20
           bg-white/10
           backdrop-blur-xl
+          dark:border-white/10
+          dark:bg-white/5
         `,
       },
     },

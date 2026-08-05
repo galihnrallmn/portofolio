@@ -23,10 +23,6 @@ export default function Footer() {
             <p className="mt-3 text-slate-600 dark:text-slate-400">
               {siteConfig.title}
             </p>
-
-            <p className="mt-2 max-w-md leading-7 text-slate-500 dark:text-slate-500">
-              {siteConfig.description}
-            </p>
           </div>
 
           {/* Social */}
@@ -47,12 +43,10 @@ export default function Footer() {
 
         {/* Bottom */}
 
-        <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-500 md:flex-row dark:text-slate-400">
+        <div className="flex flex-col items-center justify-center gap-4 text-center text-sm text-slate-500 dark:text-slate-400">
           <p>
             © {year} {siteConfig.name}. {siteConfig.copyright}
           </p>
-
-          <p>Built with ❤️ using React, TypeScript & Tailwind CSS</p>
         </div>
       </Container>
     </footer>

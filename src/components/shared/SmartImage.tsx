@@ -11,7 +11,7 @@ export default function SmartImage({ className, ...props }: Props) {
   return (
     <div className="relative overflow-hidden">
       {!loaded && (
-        <div className="absolute inset-0 animate-pulse bg-slate-200" />
+        <div className="absolute inset-0 animate-pulse bg-slate-200 dark:bg-slate-800" />
       )}
 
       <img

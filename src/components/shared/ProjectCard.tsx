@@ -11,7 +11,18 @@ interface Props {
   onView: (project: Project) => void;
 }
 
+function truncate(text: string, maxLength: number) {
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  return `${text.slice(0, maxLength).trimEnd()}....`;
+}
+
 export default function ProjectCard({ project, onView }: Props) {
+  const title = truncate(project.title, 31);
+  const description = truncate(project.description, 72);
+
   return (
     <motion.div whileHover={{ y: -8 }} transition={{ duration: 0.25 }}>
       <Card className="group overflow-hidden border-slate-200 dark:border-slate-700 dark:bg-slate-900">
@@ -31,8 +42,11 @@ export default function ProjectCard({ project, onView }: Props) {
 
         <div className="p-6">
           <div className="flex items-start justify-between gap-4">
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-              {project.title}
+            <h3
+              title={project.title}
+              className="text-2xl font-bold text-slate-900 dark:text-white"
+            >
+              {title}
             </h3>
 
             <Badge
@@ -42,18 +56,30 @@ export default function ProjectCard({ project, onView }: Props) {
             </Badge>
           </div>
 
-          <p className="mt-5 line-clamp-3 leading-7 text-slate-600 dark:text-slate-300">
-            {project.description}
+          <p
+            title={project.description}
+            className="mt-5 leading-7 text-slate-600 dark:text-slate-300"
+          >
+            {description}
           </p>
 
           {/* Tech */}
 
           <div className="mt-6 flex flex-wrap gap-2">
-            {project.technologies.map((tech) => (
+            {project.technologies.slice(0, 3).map((tech) => (
               <Badge key={tech} variant="primary">
                 {tech}
               </Badge>
             ))}
+
+            {project.technologies.length > 3 && (
+              <Badge
+                title={project.technologies.slice(3).join(", ")}
+                variant="default"
+              >
+                +{project.technologies.length - 3}
+              </Badge>
+            )}
           </div>
 
           {/* Action */}

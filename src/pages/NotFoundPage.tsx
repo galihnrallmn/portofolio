@@ -7,7 +7,7 @@ export default function NotFoundPage() {
 
       <h2 className="mt-6 text-3xl font-bold">Page Not Found</h2>
 
-      <p className="mt-4 max-w-md text-slate-600">
+      <p className="mt-4 max-w-md text-slate-600 dark:text-slate-400">
         The page you're looking for doesn't exist.
       </p>
 

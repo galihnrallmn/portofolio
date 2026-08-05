@@ -16,11 +16,11 @@ export const profile: Profile = {
   title: "Web Developer",
 
   description:
-    "Saya adalah Web Developer yang berfokus pada pengembangan aplikasi web modern menggunakan React, TypeScript, Laravel, dan berbagai teknologi terkini. Saya senang membangun antarmuka yang cepat, responsif, dan mudah digunakan.",
+    "Saya adalah Web Developer yang berfokus pada pengembangan aplikasi web modern menggunakan React, TypeScript, Laravel, Codeigniter dan berbagai teknologi terkini. Saya senang membangun antarmuka yang cepat, responsif, dan mudah digunakan.",
 
   experience: "Freelance Web Developer sejak 2024",
 
-  location: "Pelaihari, Kalimantan Selatan",
+  location: "Tanah Laut, Kalimantan Selatan",
 
   education: "D3 Teknologi Informasi",
 

@@ -1,3 +1,5 @@
+// Keep `dark` in sync with the ".dark body" rule in src/index.css and
+// with src/config/theme.ts — they must always describe the same theme.
 export const colors = {
   primary: "#2563EB",
   secondary: "#0EA5E9",
@@ -5,9 +7,9 @@ export const colors = {
 
   background: "#FFFFFF",
 
-  dark: "#09090B",
+  dark: "#020617",
 
-  surface: "#18181B",
+  surface: "#0F172A",
 
   border: "#E2E8F0",
 };

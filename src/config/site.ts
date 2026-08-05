@@ -6,7 +6,7 @@ export const siteConfig = {
   title: "Web Developer",
 
   description:
-    "Building modern web applications using React, Laravel, TypeScript and modern web technologies.",
+    "Building modern web applications using React, Laravel, Codeigniter, TypeScript and modern web technologies.",
 
   email: "galihnrallmn@gmail.com",
 

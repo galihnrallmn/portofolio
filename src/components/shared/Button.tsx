@@ -39,9 +39,12 @@ const buttonVariants = cva(
           border
           border-slate-300
           bg-white
+          text-slate-900
           hover:bg-slate-100
-          dark:bg-slate-900
           dark:border-slate-700
+          dark:bg-slate-900
+          dark:text-white
+          dark:hover:bg-slate-800
         `,
 
         ghost: `

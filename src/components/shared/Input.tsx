@@ -16,6 +16,11 @@ type TextareaProps = BaseProps &
 
 type Props = InputProps | TextareaProps;
 
+const fieldClassName =
+  "w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 " +
+  "transition outline-none placeholder:text-slate-400 focus:border-blue-600 " +
+  "dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-blue-500";
+
 export default function Input(props: Props) {
   const { label } = props;
 
@@ -26,7 +31,10 @@ export default function Input(props: Props) {
 
     return (
       <div>
-        <label htmlFor={inputId} className="mb-2 block font-medium">
+        <label
+          htmlFor={inputId}
+          className="mb-2 block font-medium text-slate-900 dark:text-slate-100"
+        >
           {label}
         </label>
 
@@ -35,7 +43,7 @@ export default function Input(props: Props) {
           name={name}
           {...textareaProps}
           rows={6}
-          className={`w-full rounded-2xl border border-slate-300 px-4 py-3 transition outline-none focus:border-blue-600 ${className ?? ""}`}
+          className={`${fieldClassName} ${className ?? ""}`}
         />
       </div>
     );
@@ -47,7 +55,10 @@ export default function Input(props: Props) {
 
   return (
     <div>
-      <label htmlFor={inputId} className="mb-2 block font-medium">
+      <label
+        htmlFor={inputId}
+        className="mb-2 block font-medium text-slate-900 dark:text-slate-100"
+      >
         {label}
       </label>
 
@@ -55,7 +66,7 @@ export default function Input(props: Props) {
         id={inputId}
         name={name}
         {...inputProps}
-        className={`w-full rounded-2xl border border-slate-300 px-4 py-3 transition outline-none focus:border-blue-600 ${className ?? ""}`}
+        className={`${fieldClassName} ${className ?? ""}`}
       />
     </div>
   );

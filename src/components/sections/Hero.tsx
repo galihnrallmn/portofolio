@@ -39,7 +39,7 @@ export default function Hero() {
 
           <motion.div variants={fadeLeft} initial="hidden" animate="visible">
             <Badge variant="primary" className="px-4 py-2 text-sm">
-              👋 Hello, I'm
+              Hello, I'm
             </Badge>
 
             <h1 className="mt-6 text-5xl leading-tight font-black text-slate-900 lg:text-7xl dark:text-white">
@@ -74,9 +74,9 @@ export default function Hero() {
             {/* Badges */}
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Badge>📍 {siteConfig.location}</Badge>
+              <Badge>{siteConfig.location}</Badge>
 
-              <Badge variant="success">💼 Available for Freelance</Badge>
+              <Badge variant="success">Available for Freelance</Badge>
             </div>
 
             {/* CTA */}
@@ -139,7 +139,7 @@ export default function Hero() {
               <SmartImage
                 src={siteConfig.avatar}
                 alt={siteConfig.name}
-                className="relative h-72 w-72 rounded-full border-8 border-white object-cover shadow-2xl lg:h-[420px] lg:w-[420px]"
+                className="relative h-72 w-72 rounded-full border-8 border-white object-cover shadow-2xl lg:h-[420px] lg:w-[420px] dark:border-slate-900"
               />
 
               {/* Card */}
@@ -149,7 +149,9 @@ export default function Hero() {
                   <FaMapMarkerAlt className="text-blue-600" />
 
                   <div>
-                    <p className="text-xs text-slate-500">Based in</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">
+                      Based in
+                    </p>
 
                     <p className="font-semibold dark:text-white">
                       {siteConfig.location}
@@ -172,7 +174,7 @@ export default function Hero() {
           duration: 2,
           repeat: Infinity,
         }}
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 text-sm text-slate-500 lg:block"
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 text-sm text-slate-500 lg:block dark:text-slate-400"
       >
         Scroll Down ↓
       </motion.div>

@@ -13,7 +13,7 @@ export default function GradientBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="fixed top-0 -left-40 -z-10 h-[500px] w-[500px] rounded-full bg-blue-400/20 blur-[120px]"
+        className="fixed top-0 -left-40 -z-10 h-[500px] w-[500px] rounded-full bg-blue-400/20 blur-[120px] dark:bg-blue-500/10"
       />
 
       <motion.div
@@ -26,7 +26,7 @@ export default function GradientBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="fixed right-0 bottom-0 -z-10 h-[450px] w-[450px] rounded-full bg-cyan-400/20 blur-[120px]"
+        className="fixed right-0 bottom-0 -z-10 h-[450px] w-[450px] rounded-full bg-cyan-400/20 blur-[120px] dark:bg-cyan-500/10"
       />
     </>
   );
