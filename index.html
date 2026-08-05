@@ -13,13 +13,40 @@
 
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <meta name="theme-color" content="#2563eb" />
+    <meta name="theme-color" content="#ffffff" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" crossorigin src="/portofolio/assets/index-DeUK4Qhy.js"></script>
-    <link rel="stylesheet" crossorigin href="/portofolio/assets/index-B1UCrw5_.css">
+
+    <script>
+      // Runs before first paint so the correct theme is applied immediately
+      // (no flash of the wrong theme on reload). Keep this in sync with
+      // getInitialTheme()/applyTheme() in src/context/ThemeContext.tsx.
+      (function () {
+        try {
+          var stored = window.localStorage.getItem("theme");
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var isDark = stored === "dark" || (stored !== "light" && prefersDark);
+
+          document.documentElement.classList.toggle("dark", isDark);
+          document.documentElement.style.colorScheme = isDark
+            ? "dark"
+            : "light";
+
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) {
+            meta.setAttribute("content", isDark ? "#020617" : "#ffffff");
+          }
+        } catch (e) {
+          // localStorage/matchMedia unavailable — fall back to light theme
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/portofolio/assets/index-CelxT33n.js"></script>
+    <link rel="stylesheet" crossorigin href="/portofolio/assets/index-JjDySA1K.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
