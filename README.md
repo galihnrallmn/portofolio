@@ -49,33 +49,6 @@ https://galihnrallmn.github.io/portofolio
 | Deployment | GitHub Pages |
 
 ---
-
-## 📁 Project Structure
-
-```text
-src
-├── assets
-├── components
-│   ├── accessibility
-│   ├── layout
-│   ├── sections
-│   ├── shared
-│   ├── seo
-│   └── ui
-├── config
-├── context
-├── data
-├── hooks
-├── pages
-├── services
-├── styles
-├── test
-├── types
-└── utils
-```
-
----
-
 ## 🚀 Getting Started
 
 Clone repository
