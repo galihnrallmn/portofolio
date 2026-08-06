@@ -1,0 +1,1 @@
+import{D as e,f as t}from"./index-CThPV4LX.js";var n=e();function r({children:e,className:r=``}){return(0,n.jsx)(t.div,{className:r,variants:{hidden:{},visible:{transition:{staggerChildren:.12}}},children:e})}function i({children:e}){return(0,n.jsx)(t.div,{variants:{hidden:{opacity:0,y:30},visible:{opacity:1,y:0}},transition:{duration:.5},children:e})}export{r as n,i as t};
