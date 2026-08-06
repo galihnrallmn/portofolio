@@ -1,0 +1,1 @@
+import{D as e,f as t,r as n}from"./index-zmjZltXJ.js";var r=e();function i({children:e}){return(0,r.jsx)(t.div,{variants:n,initial:`hidden`,whileInView:`visible`,viewport:{once:!0,amount:.15},children:e})}export{i as t};
